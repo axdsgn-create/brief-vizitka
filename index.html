@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Бриф на разработку визитной карты</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
     :root{--bg:#111;--panel:#050505;--panel2:#181818;--line:#2a2a2a;--text:#f3f3f3;--muted:#858585;--accent:#ff8a00;--accent2:#ffc069;--radius:14px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 Arial,Helvetica,sans-serif;min-height:100vh}
+    *,*::before,*::after{box-sizing:border-box;font-family:"Inter",sans-serif;font-weight:400!important}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-size:15px;line-height:1.45;min-height:100vh}
     button,input,textarea,select{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-rows:auto 1fr auto}
     header{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,64px);background:#0b0b0b;position:sticky;top:0;z-index:10}
     .brand{font-size:12px;letter-spacing:.12em;text-transform:uppercase}.brand b{color:var(--accent)}.help{color:var(--muted);font-size:13px}.shell{width:min(1160px,calc(100% - 40px));margin:0 auto;padding:42px 0 32px;display:grid;grid-template-columns:240px minmax(0,1fr);gap:42px}

@@ -55,6 +55,8 @@
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
     .orientation-grid{grid-template-columns:255px 255px}.visual-choice,.visual-choice label{width:255px;max-width:100%}.nav .btn{width:200px;max-width:calc(50% - 6px)}
     .custom-size-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;animation:customFieldsIn .32s cubic-bezier(.2,.8,.2,1)}.custom-size-fields[hidden]{display:none}.custom-size-fields .field{min-width:0}@keyframes customFieldsIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+    input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus{-webkit-text-fill-color:#fff;caret-color:#fff;-webkit-box-shadow:0 0 0 1000px #111 inset;box-shadow:0 0 0 1000px #111 inset;border-color:#2b2b2b}
+    #qrField[hidden]{display:none!important}
     @media(max-width:620px){.orientation-grid{grid-template-columns:255px}.custom-size-fields{grid-template-columns:1fr}}
   </style>
 </head>

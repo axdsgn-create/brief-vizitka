@@ -28,7 +28,7 @@
       radial-gradient(circle at 80% 10%,rgba(255,138,0,.08),transparent 27rem),
       radial-gradient(circle at 8% 76%,rgba(255,138,0,.035),transparent 24rem),#0d0d0d}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 75%)}
-    b,strong,h1,h2,.section-title,.btn.primary,.steps .active,.review-row b{font-weight:600}.brand{display:flex;align-items:center}.brand img{display:block;width:189px;height:18px}.header-meta{display:flex;align-items:center;gap:10px}.header-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px var(--accent)}
+    b,strong,h1,h2,.section-title,.btn.primary,.steps .active,.review-row b{font-weight:600}.brand{position:relative;display:flex;align-items:center}.brand img{display:block;width:189px;height:18px;transition:opacity .48s cubic-bezier(.16,1,.3,1)}.brand:after{content:"";position:absolute;inset:0;background:#FF8D28;-webkit-mask:url('Logo.svg') center/contain no-repeat;mask:url('Logo.svg') center/contain no-repeat;opacity:0;pointer-events:none;transition:opacity .48s cubic-bezier(.16,1,.3,1)}.brand:hover img,.brand:focus-visible img{opacity:0}.brand:hover:after,.brand:focus-visible:after{opacity:1}.header-meta{display:flex;align-items:center;gap:10px}.header-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px var(--accent)}
     header{height:82px;background:rgba(7,7,7,.78);backdrop-filter:blur(18px);border-color:rgba(255,255,255,.09)}
     .shell{width:min(1240px,calc(100% - 48px));grid-template-columns:220px minmax(0,1fr);gap:64px;padding:56px 0 48px}
     aside{position:sticky;top:118px;align-self:start}.aside-label{letter-spacing:.08em;text-transform:uppercase;font-size:11px}.progress{background:#252525}.steps li{position:relative;color:#626262;transition:color .25s,transform .25s}.steps li.active{transform:translateX(5px)}.steps span{border-color:#333;background:#111}.steps .done span{background:#1d1205}
@@ -197,5 +197,6 @@
   document.querySelectorAll('input[name=orientation]').forEach(el=>el.addEventListener('change',updatePreviewDimensions));
   window.addEventListener('resize',updatePreviewDimensions);
   updatePreviewDimensions();
+  document.querySelector('.brand').addEventListener('click',event=>{event.preventDefault();show(0)});
   document.getElementById('restart').onclick=()=>location.reload();show(0);
 </script></body></html>

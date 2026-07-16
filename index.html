@@ -59,7 +59,7 @@
     #qrField[hidden]{display:none!important}
     /* Liquid Glass visual layer */
     body{background:radial-gradient(circle at 82% 8%,rgba(255,138,0,.22),transparent 28rem),radial-gradient(circle at 12% 72%,rgba(255,179,92,.1),transparent 30rem),radial-gradient(circle at 55% 45%,rgba(83,83,83,.13),transparent 36rem),#080808;background-attachment:fixed}
-    #gradient{position:fixed;inset:0;z-index:0;overflow:hidden;background:#000;pointer-events:none}#gradient canvas{display:block;width:100%!important;height:100%!important}.app{position:relative;z-index:1;background:transparent}
+    #gradient{position:fixed;inset:0;z-index:0;display:block;width:100%!important;height:100%!important;background:#000;pointer-events:none}.app{position:relative;z-index:1;background:transparent}
     body:before{opacity:.42;background-image:radial-gradient(circle at 72% 18%,rgba(255,255,255,.1),transparent 1px),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:130px 130px,48px 48px,48px 48px;mask-image:linear-gradient(to bottom,black,transparent 92%)}
     header{background:linear-gradient(180deg,rgba(30,30,30,.62),rgba(8,8,8,.4));border-bottom-color:rgba(255,255,255,.14);-webkit-backdrop-filter:blur(30px) saturate(180%);backdrop-filter:blur(30px) saturate(180%);box-shadow:0 10px 40px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.1)}
     .hero-card,.panel,.spec-controls,.live-preview,.review{position:relative;background:linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.035) 42%,rgba(255,138,0,.045));border-color:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(28px) saturate(165%);backdrop-filter:blur(28px) saturate(165%);box-shadow:0 28px 80px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.18),inset 0 -1px 0 rgba(255,255,255,.035)}
@@ -87,7 +87,7 @@
     @media(max-width:620px){.orientation-grid{grid-template-columns:255px}.custom-size-fields{grid-template-columns:1fr}}
   </style>
 </head>
-<body><div id="gradient" aria-hidden="true"></div><div class="app">
+<body><canvas id="gradient" aria-hidden="true"></canvas><div class="app">
   <header><a class="brand" href="#" aria-label="EGRAPHIC"><img src="Logo.svg" alt="EGRAPHIC"></a><div class="header-meta"><span class="header-dot"></span><span class="help">Персональный бриф · 5–7 минут</span></div></header>
   <div class="shell">
     <aside><div class="aside-label" id="stepLabel">Бриф на разработку</div><div class="progress"><i id="bar"></i></div><ol class="steps" id="steps"></ol></aside>
